@@ -7,3 +7,15 @@ before_install:
 
 script:
   - docker run -e CI=true inudog/docker-kubernetes npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: "uDockerFrontend"
+  env: "UDockerFrontend-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-1-772742945665"
+  bucket_path: "uDockerFrontend"
+  on:
+    branch: master
+  access_key_id: $AWS_ACESS_KEY
+  secret_access_key: $AWS_ACESS_KEY
