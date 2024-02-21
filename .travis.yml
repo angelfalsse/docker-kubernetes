@@ -17,5 +17,5 @@ deploy:
   bucket_path: "uDockerFrontend"
   on:
     branch: master
-  access_key_id: $AWS_ACESS_KEY
-  secret_access_key: $AWS_ACESS_KEY
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_ACCESS_KEY
